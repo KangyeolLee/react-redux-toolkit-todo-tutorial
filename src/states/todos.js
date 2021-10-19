@@ -24,6 +24,13 @@ const todosSlice = createSlice({
         };
       },
     },
+    check: (state, action) => {
+      const { id, checked } = action.payload;
+
+      state.items = state.items.map((todo) =>
+        todo.id === id ? { ...todo, done: checked } : todo
+      );
+    },
   },
 });
 
