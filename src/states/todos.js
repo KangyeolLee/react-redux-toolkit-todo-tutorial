@@ -46,6 +46,9 @@ const todosSlice = createSlice({
 
       state.items = state.items.filter((todo) => todo.id !== id);
     },
+    clearCompleted: (state) => {
+      state.items = state.items.filter((todo) => !todo.done);
+    },
   },
 });
 
