@@ -38,6 +38,9 @@ const todosSlice = createSlice({
         todo.id === id ? { ...todo, text } : todo
       );
     },
+    filter: (state, action) => {
+      state.filterType = action.payload;
+    },
   },
 });
 
