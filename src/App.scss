@@ -1,0 +1,67 @@
+$theme-color: #2ac1bc;
+$border-color: #7d7d7d;
+
+.App {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  header.header {
+    h1 {
+      color: $theme-color;
+      text-align: center;
+    }
+    .todo-input {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid $border-color;
+      outline: none;
+      box-sizing: border-box;
+    }
+  }
+
+  nav.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ededed;
+    border-radius: 10px;
+
+    .filter-options {
+      display: flex;
+      list-style: none;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+
+      li > a {
+        text-decoration: none;
+        color: #111;
+
+        &.selected {
+          background-color: $theme-color;
+          padding: 5px;
+          border-radius: 3px;
+          color: #fff;
+        }
+      }
+    }
+
+    button.clear-button {
+      border: none;
+      outline: none;
+      background-color: $theme-color;
+      color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}
