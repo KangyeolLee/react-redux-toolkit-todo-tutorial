@@ -49,6 +49,11 @@ const todosSlice = createSlice({
     clearCompleted: (state) => {
       state.items = state.items.filter((todo) => !todo.done);
     },
+    toggleAll: (state, action) => {
+      const done = action.payload;
+
+      state.items = state.items.map((todo) => ({ ...todo, done }));
+    },
   },
 });
 
