@@ -31,6 +31,13 @@ const todosSlice = createSlice({
         todo.id === id ? { ...todo, done: checked } : todo
       );
     },
+    edit: (state, action) => {
+      const { id, text } = action.payload;
+
+      state.items = state.items.map((todo) =>
+        todo.id === id ? { ...todo, text } : todo
+      );
+    },
   },
 });
 
