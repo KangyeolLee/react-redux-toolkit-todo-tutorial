@@ -41,6 +41,11 @@ const todosSlice = createSlice({
     filter: (state, action) => {
       state.filterType = action.payload;
     },
+    remove: (state, action) => {
+      const id = action.payload;
+
+      state.items = state.items.filter((todo) => todo.id !== id);
+    },
   },
 });
 
