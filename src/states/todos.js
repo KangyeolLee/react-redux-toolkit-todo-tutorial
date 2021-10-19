@@ -57,5 +57,6 @@ const todosSlice = createSlice({
   },
 });
 
-export const { add } = todosSlice.actions;
+export const { add, check, edit, remove, filter, clearCompleted, toggleAll } =
+  todosSlice.actions;
 export default todosSlice.reducer;
