@@ -4,7 +4,7 @@ $warning-red-color: #ff473b;
 
 .App {
   width: 800px;
-  margin: auto;
+  margin: 5rem auto;
   display: flex;
   flex-direction: column;
 
@@ -127,20 +127,22 @@ $warning-red-color: #ff473b;
     border-radius: 10px;
 
     .filter-options {
+      margin: 0;
+      padding: 10px 0;
+      border: 1px solid $border-color;
+      border-radius: 20px;
       display: flex;
       list-style: none;
-      gap: 1rem;
-      margin: 0;
-      padding: 0;
+      overflow: hidden;
+      background-color: #fff;
 
       li > a {
+        padding: 10px 20px;
         text-decoration: none;
         color: #111;
 
         &.selected {
           background-color: $theme-color;
-          padding: 5px;
-          border-radius: 3px;
           color: #fff;
         }
       }
@@ -149,7 +151,7 @@ $warning-red-color: #ff473b;
     button.clear-button {
       border: none;
       outline: none;
-      background-color: $theme-color;
+      background-color: $warning-red-color;
       color: #fff;
       padding: 10px;
       border-radius: 8px;
