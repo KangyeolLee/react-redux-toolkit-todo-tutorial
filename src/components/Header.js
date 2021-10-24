@@ -18,7 +18,7 @@ function Header() {
 
   return (
     <header className="header">
-      <h1>TODOs</h1>
+      <h1>TODOs (with RTK)</h1>
       <input
         value={todo}
         onInput={(e) => setTodo(e.target.value)}
