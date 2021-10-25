@@ -13,6 +13,7 @@ $warning-red-color: #ff473b;
       color: $theme-color;
       text-align: center;
     }
+
     .todo-input {
       width: 100%;
       padding: 1rem;
@@ -20,6 +21,10 @@ $warning-red-color: #ff473b;
       border: 1px solid $border-color;
       outline: none;
       box-sizing: border-box;
+
+      &:focus {
+        border-color: $theme-color;
+      }
     }
   }
 
